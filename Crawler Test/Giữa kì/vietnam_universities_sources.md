@@ -36,35 +36,35 @@ Thu thập thứ hạng thực tế của các trường Đại học tại Vi�
 ---
 
 ## 3. 🎯 Danh sách 30 Trường Đại học Mục tiêu
-(Danh sách này dùng làm Base Dataset để đối chiếu/merge dữ liệu từ OpenAlex và EduRank)
+(Danh sách này dùng làm Base Dataset để đối chiếu/merge dữ liệu từ OpenAlex và EduRank. Các Tên tiếng Anh/Alias sẽ giúp tăng độ chính xác khi match data giữa 2 nguồn)
 
-1. Đại học Bách khoa Hà Nội (HUST)
-2. Đại học Công nghệ, ĐHQGHN (UET)
-3. Đại học Khoa học Tự nhiên, ĐHQGHN (HUS)
-4. Đại học Bách khoa, ĐHQG-HCM (HCMUT)
-5. Đại học Công nghệ Thông tin, ĐHQG-HCM (UIT)
-6. Đại học Khoa học Tự nhiên, ĐHQG-HCM (HCMUS)
-7. Đại học Bách khoa, ĐH Đà Nẵng (DUT)
-8. Học viện Công nghệ Bưu chính Viễn thông (PTIT)
-9. Học viện Kỹ thuật Quân sự (MTA)
-10. Học viện Kỹ thuật Mật mã (KMA)
-11. Đại học Sư phạm Kỹ thuật TP.HCM (HCMUTE)
-12. Đại học Công nghiệp Hà Nội (HaUI)
-13. Đại học Công nghiệp TP.HCM (IUH)
-14. Đại học Giao thông Vận tải (UTC)
-15. Đại học Thủy lợi (TLU)
-16. Đại học Xây dựng Hà Nội (HUCE)
-17. Đại học Mỏ - Địa chất (HUMG)
-18. Đại học Mở Hà Nội (HOU)
-19. Đại học Khoa học và Công nghệ Hà Nội (USTH - ĐH Việt Pháp)
-20. Đại học Cần Thơ (CTU)
-21. Đại học Khoa học, ĐH Huế (HUSC)
-22. Đại học Quốc tế, ĐHQG-HCM (HCMIU)
-23. Đại học FPT (FPTU)
-24. Đại học Tôn Đức Thắng (TDTU)
-25. Đại học RMIT Việt Nam (RMIT)
-26. Đại học Duy Tân (DTU)
-27. Đại học Phenikaa (PU)
-28. Đại học Văn Lang (VLU)
-29. Đại học Công nghệ TP.HCM (HUTECH)
-30. Đại học Hoa Sen (HSU)
+1. Đại học Bách khoa Hà Nội (HUST) - **Alias:** Hanoi University of Science and Technology
+2. Đại học Công nghệ, ĐHQGHN (UET) - **Alias:** VNU University of Engineering and Technology / Vietnam National University, Hanoi
+3. Đại học Khoa học Tự nhiên, ĐHQGHN (HUS) - **Alias:** VNU University of Science / Vietnam National University, Hanoi
+4. Đại học Bách khoa, ĐHQG-HCM (HCMUT) - **Alias:** Ho Chi Minh City University of Technology
+5. Đại học Công nghệ Thông tin, ĐHQG-HCM (UIT) - **Alias:** University of Information Technology - VNUHCM
+6. Đại học Khoa học Tự nhiên, ĐHQG-HCM (HCMUS) - **Alias:** University of Science, VNU-HCM
+7. Đại học Bách khoa, ĐH Đà Nẵng (DUT) - **Alias:** Danang University of Science and Technology
+8. Học viện Công nghệ Bưu chính Viễn thông (PTIT) - **Alias:** Posts and Telecommunications Institute of Technology
+9. Học viện Kỹ thuật Quân sự (MTA) - **Alias:** Military Technical Academy / Le Quy Don Technical University
+10. Học viện Kỹ thuật Mật mã (KMA) - **Alias:** Academy of Cryptography Techniques
+11. Đại học Sư phạm Kỹ thuật TP.HCM (HCMUTE) - **Alias:** Ho Chi Minh City University of Technology and Education
+12. Đại học Công nghiệp Hà Nội (HaUI) - **Alias:** Hanoi University of Industry
+13. Đại học Công nghiệp TP.HCM (IUH) - **Alias:** Industrial University of Ho Chi Minh City
+14. Đại học Giao thông Vận tải (UTC) - **Alias:** University of Transport and Communications
+15. Đại học Thủy lợi (TLU) - **Alias:** Thuyloi University / Water Resources University
+16. Đại học Xây dựng Hà Nội (HUCE) - **Alias:** Hanoi University of Civil Engineering
+17. Đại học Mỏ - Địa chất (HUMG) - **Alias:** Hanoi University of Mining and Geology
+18. Đại học Mở Hà Nội (HOU) - **Alias:** Hanoi Open University
+19. Đại học Khoa học và Công nghệ Hà Nội (USTH - ĐH Việt Pháp) - **Alias:** University of Science and Technology of Hanoi / Vietnam France University
+20. Đại học Cần Thơ (CTU) - **Alias:** Can Tho University
+21. Đại học Khoa học, ĐH Huế (HUSC) - **Alias:** University of Science, Hue University
+22. Đại học Quốc tế, ĐHQG-HCM (HCMIU) - **Alias:** International University, VNU-HCM
+23. Đại học FPT (FPTU) - **Alias:** FPT University
+24. Đại học Tôn Đức Thắng (TDTU) - **Alias:** Ton Duc Thang University
+25. Đại học RMIT Việt Nam (RMIT) - **Alias:** RMIT University Vietnam
+26. Đại học Duy Tân (DTU) - **Alias:** Duy Tan University
+27. Đại học Phenikaa (PU) - **Alias:** Phenikaa University
+28. Đại học Văn Lang (VLU) - **Alias:** Van Lang University
+29. Đại học Công nghệ TP.HCM (HUTECH) - **Alias:** Ho Chi Minh City University of Technology (HUTECH)
+30. Đại học Hoa Sen (HSU) - **Alias:** Hoa Sen University
