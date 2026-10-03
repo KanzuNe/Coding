@@ -1,29 +1,29 @@
-University_Name,Vietnam_Rank,Asia_Rank,City
-"Vietnam National University, Ho Chi Minh City",1,372,Ho Chi Minh
-Hanoi University of Science and Technology,2,392,Hanoi
-Ho Chi Minh City University of Technology,3,452,Ho Chi Minh
-Duy Tan University,4,582,Da Nang
-"Vietnam National University, Hanoi",5,602,Hanoi
-Ho Chi Minh City University of Science,6,828,Ho Chi Minh
-VNU University of Science,7,1023,Hanoi
-FPT University,8,1039,Hanoi
-Can Tho University,9,1126,Can Tho
-University of Economics Ho Chi Minh City,10,1362,Ho Chi Minh
-Thuyloi University,11,1365,Hanoi
-Hanoi University of Mining and Geology,12,1372,Hanoi
-Hanoi National University of Education,13,1383,Hanoi
-Hanoi University,14,1398,Hanoi
-Hanoi University of Industry,15,1444,Hanoi
-Ho Chi Minh City International University,16,1643,Ho Chi Minh
-National Economics University,17,1669,Hanoi
-Vinh University,18,1736,Vinh
-National University of Civil Engineering,19,1773,Hanoi
-Vietnam Maritime University,20,1805,Haiphong
-Ho Chi Minh City University of Transport,21,1812,Ho Chi Minh
-Saigon University,22,1966,Ho Chi Minh
-Nha Trang University,23,2006,Nha Trang
-Foreign Trade University,24,2169,Hanoi
-Hanoi Medical University,25,2223,Hanoi
-University of Medicine and Pharmacy at Ho Chi Minh City,26,2237,Ho Chi Minh
-Ho Chi Minh City University of Agriculture and Forestry,27,2316,Ho Chi Minh
-Hanoi Architectural University,28,2401,Hanoi
+University_Name,Vietnam_Rank,Asia_Rank,World_Rank,City,Acceptance_Rate,Enrollment,Founded,AI_Publications,AI_Citations,Tuition_VND
+"Vietnam National University, Ho Chi Minh City",1,372,1087,Ho Chi Minh,,,1995,4590,37590,
+Hanoi University of Science and Technology,2,392,1136,Hanoi,54,28000,1956,4223,37347,45000000 VND
+Ho Chi Minh City University of Technology,3,452,1240,Ho Chi Minh,30,,1957,3715,42083,25000000 VND
+Duy Tan University,4,582,1492,Da Nang,30,20000,1994,2380,103824,30000000 - 40000000
+"Vietnam National University, Hanoi",5,602,1535,Hanoi,32,,1906,1702,35996,15000000 VND
+Ho Chi Minh City University of Science,6,828,1958,Ho Chi Minh,10,30000,1941,1404,13588,15000000 VND
+VNU University of Science,7,1023,2332,Hanoi,,15000,1993,898,15879,
+FPT University,8,1039,2359,Hanoi,55,,2006,1142,8792,120000000
+Can Tho University,9,1126,2512,Can Tho,12,,1966,1146,9481,
+University of Economics Ho Chi Minh City,10,1362,3008,Ho Chi Minh,,,1976,689,9023,
+Thuyloi University,11,1365,3012,Hanoi,,15660,1959,607,11794,
+Hanoi University of Mining and Geology,12,1372,3029,Hanoi,,,1966,475,15739,
+Hanoi National University of Education,13,1383,3049,Hanoi,,,1951,539,5832,
+Hanoi University,14,1398,3082,Hanoi,43,,1959,589,7207,25000000 VND
+Hanoi University of Industry,15,1444,3187,Hanoi,32,30000,1999,688,5326,20000000 - 25000000
+Ho Chi Minh City International University,16,1643,3644,Ho Chi Minh,11,6000,2003,409,3840,
+National Economics University,17,1669,3703,Hanoi,,,1956,360,5425,
+Vinh University,18,1736,3860,Vinh,18,,1959,336,3621,15000000 VND
+National University of Civil Engineering,19,1773,3938,Hanoi,,,1966,335,5369,
+Vietnam Maritime University,20,1805,4025,Haiphong,30,,1956,311,3727,
+Ho Chi Minh City University of Transport,21,1812,4050,Ho Chi Minh,16,,1988,272,3684,25000000 VND
+Saigon University,22,1966,4442,Ho Chi Minh,,,2007,252,1275,
+Nha Trang University,23,2006,4542,Nha Trang,,,1959,239,3145,
+Foreign Trade University,24,2169,4971,Hanoi,43,25000,1960,152,1312,
+Hanoi Medical University,25,2223,5097,Hanoi,10,,1902,,,30000000 - 40000000
+University of Medicine and Pharmacy at Ho Chi Minh City,26,2237,5147,Ho Chi Minh,,,1947,,,
+Ho Chi Minh City University of Agriculture and Forestry,27,2316,5357,Ho Chi Minh,30,15000,1955,,,15000000 VND
+Hanoi Architectural University,28,2401,5589,Hanoi,50,,1961,94,695,
