@@ -20,15 +20,28 @@ def style_fig(fig):
     )
     return fig
 
+labels_dict = {
+    'AI_Citations': 'Trích dẫn',
+    'AI_Publications': 'Số bài báo',
+    'University_Name': 'Trường Đại học',
+    'City': 'Thành phố',
+    'Publication_Year': 'Năm xuất bản',
+    'Paper_ID': 'Số bài báo',
+    'Vietnam_Rank': 'Hạng VN',
+    'Acceptance_Rate': 'Tỉ lệ đỗ',
+    'lat': 'Vĩ độ',
+    'lon': 'Kinh độ'
+}
+
 # 1. Boxplot
-fig1 = px.box(df_merged, y='AI_Citations', log_y=True, title='Phân bố lượng trích dẫn AI (Log Scale)')
+fig1 = px.box(df_merged, y='AI_Citations', hover_name='University_Name', log_y=True, title='Phân bố lượng trích dẫn AI (Log Scale)', labels=labels_dict)
 fig1 = style_fig(fig1)
 html1 = fig1.to_html(full_html=False, include_plotlyjs=False)
 
 # 2. Line Chart
 df_year = df_oa.groupby('Publication_Year')['Paper_ID'].count().reset_index()
 df_year = df_year[df_year['Publication_Year'] >= 2010]
-fig2 = px.line(df_year, x='Publication_Year', y='Paper_ID', title='Số lượng bài báo AI qua các năm (từ 2010)')
+fig2 = px.line(df_year, x='Publication_Year', y='Paper_ID', title='Số lượng bài báo AI qua các năm (từ 2010)', labels=labels_dict)
 fig2 = style_fig(fig2)
 fig2.update_traces(line_color='#0ea5e9', line_width=3)
 html2 = fig2.to_html(full_html=False, include_plotlyjs=False)
@@ -36,18 +49,47 @@ html2 = fig2.to_html(full_html=False, include_plotlyjs=False)
 # 3. Scatter
 # Yêu cầu bổ sung hồi quy (trendline) - thêm trendline='ols'
 df_scatter = df_merged.dropna(subset=['AI_Publications', 'AI_Citations'])
-fig3 = px.scatter(df_scatter, x='AI_Publications', y='AI_Citations', title='Tương quan Số bài báo & Trích dẫn', hover_data=['University_Name'], trendline='ols', trendline_color_override='red')
+fig3 = px.scatter(df_scatter, x='AI_Publications', y='AI_Citations', title='Tương quan Số bài báo & Trích dẫn', hover_data=['University_Name'], trendline='ols', trendline_color_override='red', labels=labels_dict)
 fig3 = style_fig(fig3)
 html3 = fig3.to_html(full_html=False, include_plotlyjs=False)
 
 # 4. Treemap
 df_clean = df_merged.dropna(subset=['City', 'University_Name'])
-fig4 = px.treemap(df_clean, path=['City', 'University_Name'], values='AI_Publications', title='Phân bố bài báo theo Thành phố')
+fig4 = px.treemap(df_clean, path=['City', 'University_Name'], values='AI_Publications', title='Phân bố bài báo theo Thành phố', labels=labels_dict)
 fig4 = style_fig(fig4)
 html4 = fig4.to_html(full_html=False, include_plotlyjs=False)
 
+# 4b. Map
+city_coords = {
+    'Hanoi': (21.0285, 105.8542),
+    'Ho Chi Minh': (10.8231, 106.6297),
+    'Da Nang': (16.0544, 108.2022),
+    'Can Tho': (10.0452, 105.7469),
+    'Vinh': (18.6733, 105.6813),
+    'Haiphong': (20.8449, 106.6881),
+    'Nha Trang': (12.2388, 109.1967)
+}
+df_map = df_merged.dropna(subset=['City']).copy()
+df_map['lat'] = df_map['City'].map(lambda x: city_coords.get(x, (0,0))[0])
+df_map['lon'] = df_map['City'].map(lambda x: city_coords.get(x, (0,0))[1])
+fig_map = px.scatter_map(
+    df_map, lat="lat", lon="lon", 
+    hover_name="University_Name",
+    hover_data=["City", "AI_Publications"],
+    size="AI_Publications",
+    color="AI_Publications",
+    color_continuous_scale="Blues",
+    zoom=4.5,
+    center={"lat": 16.0, "lon": 106.0}, 
+    title="Phân bố các trường Đại học trên bản đồ Việt Nam",
+    labels=labels_dict
+)
+fig_map.update_layout(map_style="open-street-map", margin={"r":20,"t":40,"l":20,"b":20}, font=dict(family="Inter, sans-serif", color="#334155"))
+html_map = fig_map.to_html(full_html=False, include_plotlyjs=False)
+
 # 5. Heatmap
 df_numeric = df_merged[['Vietnam_Rank', 'Acceptance_Rate', 'AI_Publications', 'AI_Citations']]
+df_numeric = df_numeric.rename(columns=labels_dict)
 fig5 = px.imshow(df_numeric.corr(), text_auto=True, title='Heatmap ma trận tương quan', color_continuous_scale='Blues')
 fig5 = style_fig(fig5)
 html5 = fig5.to_html(full_html=False, include_plotlyjs=False)
@@ -72,7 +114,7 @@ html_template = f"""
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Báo cáo Năng lực Nghiên cứu AI tại Việt Nam</title>
     <!-- Load Plotly once globally -->
-    <script src="https://cdn.plot.ly/plotly-2.32.0.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <style>
         :root {{
@@ -177,7 +219,16 @@ html_template = f"""
         <!-- Tab 2 -->
         <div id="tab2" class="tab-content">
             <h1 class="header-title">Phân bố Năng lực theo Khu vực</h1>
+            
             <div class="story-section">
+                <div class="story-text">
+                    <h2>Bản đồ phân bố AI</h2>
+                    <p>Bản đồ dưới đây thể hiện quy mô nghiên cứu AI dựa trên vị trí địa lý. Kích thước vòng tròn tỷ lệ thuận với số lượng bài báo AI. Có thể thấy rõ sự tập trung đông đảo ở các thành phố lớn.</p>
+                </div>
+                <div class="story-chart">{html_map}</div>
+            </div>
+            
+            <div class="story-section reverse">
                 <div class="story-text">
                     <h2>Đầu tàu công nghệ: Hà Nội & TP.HCM</h2>
                     <p>Biểu đồ Treemap minh họa rõ nét sự phân bổ học thuật tại Việt Nam. Hai trung tâm kinh tế lớn nhất cả nước là Hà Nội và TP.HCM đang chiếm lĩnh diện tích lớn nhất, đóng vai trò dẫn dắt lực lượng nghiên cứu AI của toàn quốc. Các trường như Đại học Bách Khoa, Đại học Quốc Gia đang duy trì vị thế đứng đầu vững chắc.</p>
