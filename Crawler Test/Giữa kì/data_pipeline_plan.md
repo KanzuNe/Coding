@@ -42,6 +42,8 @@ Thu thập từ 2 nguồn chính với dữ liệu chất lượng cao và có c
     *   Các thành phố "đầu tàu" (Hà Nội, TP.HCM, Đà Nẵng) đóng góp tỷ trọng bao nhiêu vào tổng lực lượng nghiên cứu AI của Việt Nam?
 
 ## 5. 💻 Frontend Dashboard (Giao diện hiển thị)
-*   **Phong cách thiết kế (UI/UX):** Giao diện Dark mode, mượt mà mang hơi hướng Tech/Data (như Grafana, Portainer).
-*   **Bố cục (Layout):** Sử dụng các Grid/Card (Bảng điều khiển) vuông vức, hiển thị các chỉ số nổi bật (Tổng số bài báo AI của VN, Top 1 trường...) và đóng gói các biểu đồ gọn gàng.
-*   **Tích hợp Data:** Dữ liệu sau khi xử lý ở Pandas/Jupyter Notebook sẽ xuất ra CSV/JSON và load lên Frontend (hoặc dùng Streamlit/Dash để xây dựng web app dữ liệu cực nhanh).
+*   **Phong cách thiết kế (UI/UX):** Phong cách chuyên nghiệp, tối giản. Tông màu chủ đạo: Trắng và Xanh trời nhẹ (Light Blue), tạo cảm giác sạch sẽ, dễ nhìn.
+*   **Bố cục (Layout):**
+    *   Sử dụng Sidebar kết hợp Tabs để phân chia các nhóm biểu đồ có liên quan (VD: Tổng quan, Phân bố khu vực, Tương quan học thuật).
+    *   Bố cục trình bày theo hướng Storytelling (kể chuyện dữ liệu): mỗi biểu đồ sẽ đi kèm phần text nhận xét/so sánh bên cạnh giống như trang giới thiệu sản phẩm.
+*   **Tích hợp Data:** Xuất thẳng toàn bộ kết quả phân tích và biểu đồ Plotly thành một file `index.html` tĩnh độc lập (Standalone). Đảm bảo giáo viên chỉ cần click đúp mở file `index.html` trên trình duyệt bất kỳ là mọi biểu đồ tự động hiển thị đầy đủ, không phụ thuộc vào Python hay môi trường cài đặt.
