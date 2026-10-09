@@ -93,7 +93,8 @@ uni_coords = {
     "Hanoi Medical University": (21.0022, 105.8291),
     "University of Medicine and Pharmacy at Ho Chi Minh City": (10.7562, 106.6644),
     "Ho Chi Minh City University of Agriculture and Forestry": (10.8698, 106.7938),
-    "Hanoi Architectural University": (20.9818, 105.7891)
+    "Hanoi Architectural University": (20.9818, 105.7891),
+    "Posts and Telecommunications Institute of Technology": (20.9806, 105.7876)
 }
 
 df_map = df_merged.dropna(subset=['University_Name']).copy()
